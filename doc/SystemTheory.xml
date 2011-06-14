@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+  SystemTheory.xml            SystemTheory package documentation
+
+         Copyright (C) 2011, Mohamed Barakat, University of Kaiserslautern
+
+-->
+
+<Chapter Label="SystemTheory">
+<Heading>SystemTheory</Heading>
+
+<Section Label="SystemTheory:Category">
+<Heading>SystemTheory: Category and Representations</Heading>
+
+</Section>
+
+<Section Label="SystemTheory:Constructors">
+<Heading>SystemTheory: Constructors</Heading>
+
+</Section>
+
+<Section Label="SystemTheory:Properties">
+<Heading>SystemTheory: Properties</Heading>
+
+
+</Section>
+
+<Section Label="SystemTheory:Attributes">
+<Heading>SystemTheory: Attributes</Heading>
+
+<!-- the following attributes are intrinsic in the sense that
+     they can safely be attached to any copy of the sheaf -->
+
+</Section>
+
+<Section Label="SystemTheory:Operations">
+<Heading>SystemTheory: Operations and Functions</Heading>
+
+</Section>
+<!-- ############################################################ -->
+
+</Chapter>

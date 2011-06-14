@@ -1,0 +1,36 @@
+    README file for the `SystemTheory' GAP4 package
+        
+To get the newest version of this GAP 4 package download one of the
+archive files
+    SystemTheory-x.x.tar.gz
+    SystemTheory-x.x.zoo
+    SystemTheory-x.x.tar.bz2
+    SystemTheory-x.x.zip
+and unpack it using 
+    gunzip SystemTheory-x.x.tar.gz; tar xvf SystemTheory-x.x.tar
+respectively
+    unzoo -x SystemTheory-x.x.zoo
+and so on.
+
+(Note that if you use a browser like `netscape' for downloading the
+archive file the `gunzip' step above may already be done by the browser,
+although the name of your file may still have the misleading `.gz'
+extension.)
+
+Do this preferably (but not necessarily) inside the `pkg' subdirectory
+of your GAP 4 installation. It creates a subdirectory called `SystemTheory'.
+
+This completes the installation of the package.
+
+Testing the package is possible by invoking
+
+ReadPackage( "SystemTheory", "maketest.g" );
+
+from within GAP.
+
+E-mail us if there are any questions, remarks, suggestions. Also, we
+would like to hear about applications of this package.
+
+
+Mohamed Barakat, e-mail: barakat@mathematik.uni-kl.de
+Oleksandr Motsak, e-mail: motsak@mathematik.uni-kl.de

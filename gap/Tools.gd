@@ -16,3 +16,6 @@
 
 # basic operations:
 
+DeclareOperation(
+    "GeneralLinearCombination",
+    [ IsHomalgRing, IsInt, IsList, IsInt ] );

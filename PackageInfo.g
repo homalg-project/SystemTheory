@@ -264,7 +264,7 @@ Dependencies := rec(
   # list of pairs [package name, (least) version],  package name is case
   # insensitive, least version denoted with '>=' prepended to version string.
   # without these, the package will not load
-  NeededOtherPackages := [ [ "k-Points", ">= 2011.06.01" ], [ "AbelianSystems", ">= 2011.04.16" ], [ "GAPDoc", ">= 1.0" ] ],
+  NeededOtherPackages := [ [ "k-Points", ">= 2011.06.01" ], [ "AbelianSystems", ">= 2011.04.16" ], [ "D-Modules", ">= 2011.04.29" ], [ "GAPDoc", ">= 1.0" ] ],
   # without these the package will issue a warning while loading
   # SuggestedOtherPackages := [],
   SuggestedOtherPackages := [ ],

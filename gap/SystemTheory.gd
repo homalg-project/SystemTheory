@@ -18,6 +18,10 @@
 
 # basic operations:
 
+DeclareOperation(
+    "SpecializationToCoimage",
+    [ IsHomalgMorphism ] );
+
 ####################################
 #
 # synonyms:

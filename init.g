@@ -22,3 +22,6 @@ ReadPackage( "SystemTheory", "gap/SingularTools.gd" );
 
 ##
 ReadPackage( "SystemTheory", "gap/MapleHomalgTools.gd" );
+
+##
+ReadPackage( "SystemTheory", "gap/Idempotent.gd" );

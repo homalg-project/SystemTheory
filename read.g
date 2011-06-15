@@ -22,3 +22,6 @@ ReadPackage( "SystemTheory", "gap/SingularTools.gi" );
 
 ##
 ReadPackage( "SystemTheory", "gap/MapleHomalgTools.gi" );
+
+##
+ReadPackage( "SystemTheory", "gap/Idempotent.gi" );

@@ -18,12 +18,13 @@
 
 # basic operations:
 
-DeclareOperation(
-    "NonTrivialEndomorphismIdempotents",
-    [ IsHomalgStaticObject ] );
+DeclareOperation( "NonTrivialEndomorphismIdempotents",
+    [ IsHomalgStaticObject, IsInt, IsList ] );
     
-DeclareOperation(
-    "GeneralEndomorphism",
+DeclareOperation( "NonTrivialEndomorphismIdempotents",
+    [ IsHomalgStaticObject, IsInt ] );
+    
+DeclareOperation( "GeneralEndomorphism",
     [ IsHomalgStaticObject, IsInt, IsList ] );
 
 ####################################

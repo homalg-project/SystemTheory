@@ -15,16 +15,16 @@
 ##
 InstallMethod( NonTrivialEndomorphismIdempotents,
         "for a homalg module",
-        [ IsHomalgModule ],
+        [ IsHomalgModule, IsInt, IsList ],
   
-  function( M )
-  local R, indets, alpha, A, indetsA, beta, I, res;
+  function( M, bound, l )
+    local R, indets, alpha, A, indetsA, beta, I, res;
     
     R := HomalgRing( M );
     
     indets := Indeterminates( R );
     
-    alpha := GeneralEndomorphism( M, 0, List( [ 1 .. Length( indets ) ], i -> 1 ) );
+    alpha := GeneralEndomorphism( M, bound, l );
     
     A := HomalgRing( alpha );
     
@@ -34,12 +34,27 @@ InstallMethod( NonTrivialEndomorphismIdempotents,
     
     DecideZero( beta );
     
-    I := IdealOfCoefficients( MatrixOfMap( beta ), indetsA );
+    I := MatrixOfCoefficients( MatrixOfMap( beta ), indetsA );
     
-    res := APoint( I );
+    #res := AssociatedPrimes( I );
     
     Error("test");
     
+end );
+
+##
+InstallMethod( NonTrivialEndomorphismIdempotents,
+        "for a homalg module",
+        [ IsHomalgModule, IsInt ],
+        
+  function( M, bound )
+    local n, l;
+    
+    n := Length( Indeterminates( HomalgRing( M ) ) );
+    
+    l := ListWithIdenticalEntries( n, 1 );
+    
+    return NonTrivialEndomorphismIdempotents( M, bound, l );
     
 end );
 

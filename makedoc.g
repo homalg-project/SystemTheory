@@ -13,6 +13,8 @@ WriteBibXMLextFile( "doc/SystemTheoryBib.xml", bib );
 
 Read( "ListOfDocFiles.g" );
 
+PrintTo( "VERSION", PackageInfo( "SystemTheory" )[1].Version );
+
 MakeGAPDocDoc( "doc", "SystemTheoryForHomalg", list, "SystemTheoryForHomalg" );
 
 GAPDocManualLab("SystemTheory");

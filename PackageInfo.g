@@ -32,6 +32,8 @@ Version := Maximum( [
 ## this line prevents merge conflicts
   "2011.06.14", ## Markus's version
 ## this line prevents merge conflicts
+  "2011.06.15", ## Mohamed's version
+## this line prevents merge conflicts
   "2011.06.01", ## Thomas's version
 ] ),
 ##  Please adjust also the VERSION file in the package directory when
@@ -39,7 +41,7 @@ Version := Maximum( [
 
 ##  Release date of the current version in dd/mm/yyyy format.
 # 
-Date := "14/06/2011",
+Date := "15/06/2011",
 
 ##  URL of the archive(s) of the current package release, but *without*
 ##  the format extension(s), like '.zoo', which are given next.

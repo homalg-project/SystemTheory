@@ -39,28 +39,23 @@ InstallMethod( GeneralLinearCombination,
     
     m := NrRows( mat );
     
-    A := R;
+    # todo: better names for the bi: use the corresponding degree of the monomial
+    s := List( [ 1 .. n ], i -> Concatenation( "b_", String( i ), "_0..", String( m - 1 ) ) );
     
-    r := [ ];
+    s := JoinStringsWithSeparator( s );
     
-    for i in [ 1 .. n ] do
-        
-        s := Concatenation( "b_", String( i ), "_0..", String( m - 1 ) );
-        
-        # todo: better names for the bi: use the corresponding degree of the monomial
-        A := A * s;
-        
-        indets := HomalgMatrix( RelativeIndeterminatesOfPolynomialRing( A ), 1, m, A );
-        
-        mat := A * mat;
-        
-        Add( r, GetEntryOfHomalgMatrix( indets * mat, 1, 1 ) );
-        
-    od;
+    A := R * s;
     
-    r := List( r, rr -> rr / A );
+    indets := RelativeIndeterminatesOfPolynomialRing( A );
     
-    return r;
+    indets := ListToListList( indets, n, m );
     
-
+    indets := List( indets, l -> HomalgMatrix( l, 1, m, A ) );
+    
+    mat := A * mat;
+    
+    r := List( indets, i -> GetEntryOfHomalgMatrix( i * mat, 1, 1 ) );
+    
+    return List( r, rr -> rr / A );
+    
 end );

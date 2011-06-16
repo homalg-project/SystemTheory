@@ -4,6 +4,9 @@
 ##  Call this with GAP.
 ##
 
+## remove with GAP 4.5
+LoadPackage( "Modules" );
+
 LoadPackage( "SystemTheory" );
 
 LoadPackage( "IO_ForHomalg" );

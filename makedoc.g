@@ -6,6 +6,9 @@
 
 LoadPackage( "GAPDoc" );
 
+## remove with GAP 4.5
+LoadPackage( "Modules" );
+
 SetGapDocLaTeXOptions( "utf8" );
 
 bib := ParseBibFiles( "doc/SystemTheory.bib" );

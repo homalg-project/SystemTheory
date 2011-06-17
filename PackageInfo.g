@@ -304,7 +304,7 @@ BannerString := Concatenation(
   "Loading  SystemTheory ", ~.Version, "\n",
   "by ", ~.Persons[1].FirstNames, " ", ~.Persons[1].LastName,
         " (", ~.Persons[1].WWWHome, ")\n",
-  "by ", ~.Persons[2].FirstNames, " ", ~.Persons[2].LastName,
+  "   ", ~.Persons[2].FirstNames, " ", ~.Persons[2].LastName,
         " (", ~.Persons[2].WWWHome, ")\n",
   "Type:\n",
   "  ?SystemTheory:                ## for the contents of the manual\n",

@@ -18,15 +18,24 @@
 
 # basic operations:
 
+DeclareOperation( "IdealDefiningNonTrivialEndomorphismIdempotents",
+    [ IsHomalgStaticObject, IsInt, IsList ] );
+
+DeclareOperation( "IdealDefiningNonTrivialEndomorphismIdempotents",
+    [ IsHomalgStaticObject, IsInt ] );
+    
+DeclareOperation( "NonTrivialEndomorphismIdempotent",
+    [ IsHomalgStaticObject, IsInt, IsList ] );
+    
+DeclareOperation( "NonTrivialEndomorphismIdempotent",
+    [ IsHomalgStaticObject, IsInt ] );
+    
 DeclareOperation( "NonTrivialEndomorphismIdempotents",
     [ IsHomalgStaticObject, IsInt, IsList ] );
     
 DeclareOperation( "NonTrivialEndomorphismIdempotents",
     [ IsHomalgStaticObject, IsInt ] );
     
-DeclareOperation( "GeneralEndomorphism",
-    [ IsHomalgStaticObject, IsInt, IsList ] );
-
 ####################################
 #
 # synonyms:

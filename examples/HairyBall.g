@@ -8,8 +8,16 @@ LoadPackage( "Modules" );
 
 M := LeftPresentation( m );
 
-IsStablyFree( M );
+Assert( 0, IsStablyFree( M ) );
 
-Rank( M );
+Assert( 0, Rank( M ) = 2 );
+
+Assert( 0, LargestMinimalNumberOfLocalGenerators( M ) = 2 );
 
 LoadPackage( "SystemTheory" );
+
+I := IdealDefiningNonTrivialEndomorphismIdempotents( M, 0 );
+
+idem := NonTrivialEndomorphismIdempotents( M, 0 )[1];
+
+DS := DirectSumDecomposition( idem );

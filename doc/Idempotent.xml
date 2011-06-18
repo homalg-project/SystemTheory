@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+  Idempotent.xml            Idempotent package documentation
+
+         Copyright (C) 2011, Mohamed Barakat, University of Kaiserslautern
+
+-->
+
+<Chapter Label="Idempotent">
+<Heading>Idempotent</Heading>
+
+<Section Label="Idempotent:Operations">
+<Heading>Idempotent: Operations and Functions</Heading>
+
+<#Include Label="NonTrivialEndomorphismIdempotent"/>
+<#Include Label="ManyNonTrivialEndomorphismIdempotents"/>
+
+</Section>
+<!-- ############################################################ -->
+
+</Chapter>

@@ -17,7 +17,7 @@
 ##    <A non-zero idempotent of a left module>, 
 ##    <A non-zero idempotent of a left module>, 
 ##    <A non-zero idempotent of a left module> ]
-##   gap> DSums := List( idems, DirectSumDecomposition );
+##  gap> DSums := List( idems, DirectSumDecomposition );
 ##  [ <A rank 1 left module presented by 2 relations for 3 generators>, 
 ##    <A rank 1 left module presented by 2 relations for 3 generators>, 
 ##    <A rank 1 left module presented by 2 relations for 3 generators>, 
@@ -26,9 +26,9 @@
 ##    <A rank 1 left module presented by 2 relations for 3 generators>, 
 ##    <A rank 1 left module presented by 2 relations for 3 generators>, 
 ##    <A rank 1 left module presented by 2 relations for 3 generators> ]
-##   gap> M;
-##   <A rank 1 left module presented by 1 relation for 2 generators>
-##   gap> Perform( DSums, Display );
+##  gap> M;
+##  <A rank 1 left module presented by 2 relations for 3 generators>
+##  gap> Perform( DSums, Display );
 ##  d*delta^2-d,0,          0,                
 ##  0,          d*delta^2+d,(-alpha)*d^2*delta
 ##  
@@ -118,4 +118,3 @@ idems := NonTrivialEndomorphismIdempotents( M, 0 );
 DSums := List( idems, DirectSumDecomposition );
 
 Perform( DSums, Display );
-

@@ -71,7 +71,7 @@ end );
 ##    <Oper Arg="M, bound[, l]" Name="NonTrivialEndomorphismIdempotent" Label="for a module and a nonnegative integer"/>
 ##    <Description>
 ##       This operation takes a module <A>M</A>, a nonnegative integer <A>bound</A>, and optionally a third list of weights <A>l</A>. It returns a nontrivial idempotent of the endomorphism ring of <A>M</A>.
-##      <#Include Label="TankModel:example">
+##      <#Include Label="TankModel">
 ##    </Description>
 ##  </ManSection>
 ##  <#/GAPDoc>
@@ -152,7 +152,7 @@ end );
 ##    <Oper Arg="M, bound[, l]" Name="NonTrivialEndomorphismIdempotents" Label="for a module and a nonnegative integer"/>
 ##    <Description>
 ##       This operation takes a module <A>M</A>, a nonnegative integer <A>bound</A>, and optionally a third list of weights <A>l</A>. It returns nontrivial idempotents of the endomorphism ring of <A>M</A>.
-##      <#Include Label="TankModel2:example">
+##      <#Include Label="TankModel2">
 ##    </Description>
 ##  </ManSection>
 ##  <#/GAPDoc>
@@ -220,15 +220,7 @@ InstallMethod( NonTrivialEndomorphismIdempotents,
     
 end );
 
-##  <#GAPDoc Label="NonTrivialEndomorphismIdempotents">
-##  <ManSection>
-##    <Oper Arg="M, bound[, l]" Name="NonTrivialEndomorphismIdempotents" Label="for a module and a nonnegative integer"/>
-##    <Description>
-##       This operation takes a module <A>M</A>, a nonnegative integer <A>bound</A>, and optionally a third list of weights <A>l</A>. It returns a nontrivial idempotent of the endomorphism ring of <A>M</A>.
-##      <#Include Label="TankModel:example">
-##    </Description>
-##  </ManSection>
-##  <#/GAPDoc>
+##
 InstallMethod( NonTrivialEndomorphismIdempotents,
         "for a homalg module",
         [ IsHomalgModule, IsInt ],

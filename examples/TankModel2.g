@@ -1,4 +1,4 @@
-##  <#GAPDoc Label="TankModel2:example">
+##  <#GAPDoc Label="TankModel2">
 ##  <Example><![CDATA[
 ##  gap> R := HomalgFieldOfRationalsInDefaultCAS( "alpha" ) * "d,delta";;
 ##  gap> m := HomalgMatrix( "[ \

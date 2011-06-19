@@ -41,6 +41,10 @@
 ##  , x^2+y^2+z^2-1 ]
 ##  
 ##  the map is currently represented by the above 3 x 4 matrix
+##  gap> F1 := Range( EpiOnLeftFactor( DS ) );
+##  <A non-zero projective left module presented by 4 relations for 2 generators>
+##  gap> F2 := Range( EpiOnRightFactor( DS ) );
+##  <A non-zero projective left module presented by 4 relations for 2 generators>
 ##  ]]></Example>
 ##  <#/GAPDoc>
 

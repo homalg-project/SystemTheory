@@ -7,4 +7,5 @@ list := [
          "../gap/Idempotent.gi",
          "../examples/TankModel.g",
          "../examples/TankModel2.g",
+         "../examples/HairyBall.g",
          ];

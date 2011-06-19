@@ -32,7 +32,7 @@ Version := Maximum( [
 ## this line prevents merge conflicts
   "2011.06.14", ## Markus's version
 ## this line prevents merge conflicts
-  "2011.06.15", ## Mohamed's version
+  "2011.06.18", ## Mohamed's version
 ## this line prevents merge conflicts
   "2011.06.01", ## Thomas's version
 ] ),
@@ -41,7 +41,7 @@ Version := Maximum( [
 
 ##  Release date of the current version in dd/mm/yyyy format.
 # 
-Date := "17/06/2011",
+Date := "18/06/2011",
 
 ##  URL of the archive(s) of the current package release, but *without*
 ##  the format extension(s), like '.zoo', which are given next.
@@ -268,7 +268,7 @@ Dependencies := rec(
   # list of pairs [package name, (least) version],  package name is case
   # insensitive, least version denoted with '>=' prepended to version string.
   # without these, the package will not load
-  NeededOtherPackages := [ [ "k-Points", ">= 2011.06.16" ], [ "AbelianSystems", ">= 2011.04.16" ], [ "D-Modules", ">= 2011.04.29" ], [ "GAPDoc", ">= 1.0" ] ],
+  NeededOtherPackages := [ [ "k-Points", ">= 2011.06.16" ], [ "AbelianSystems", ">= 2011.04.16" ], [ "D-Modules", ">= 2011.04.29" ], [ "MatricesForHomalg", ">= 2011.06.18" ], [ "GAPDoc", ">= 1.0" ] ],
   # without these the package will issue a warning while loading
   # SuggestedOtherPackages := [],
   SuggestedOtherPackages := [ ],

@@ -24,6 +24,12 @@ DeclareOperation( "IdealDefiningNonTrivialEndomorphismIdempotents",
 DeclareOperation( "IdealDefiningNonTrivialEndomorphismIdempotents",
     [ IsHomalgStaticObject, IsInt ] );
     
+DeclareOperation( "NonTrivialGeneralEndomorphismIdempotent",
+    [ IsHomalgStaticObject, IsInt, IsList ] );
+    
+DeclareOperation( "NonTrivialGeneralEndomorphismIdempotent",
+    [ IsHomalgStaticObject, IsInt ] );
+    
 DeclareOperation( "NonTrivialEndomorphismIdempotent",
     [ IsHomalgStaticObject, IsInt, IsList ] );
     

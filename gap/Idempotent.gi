@@ -66,6 +66,87 @@ InstallMethod( IdealDefiningNonTrivialEndomorphismIdempotents,
     
 end );
 
+##  <#GAPDoc Label="GeneralNonTrivialEndomorphismIdempotent">
+##  <ManSection>
+##    <Oper Arg="M, bound[, l]" Name="GeneralNonTrivialEndomorphismIdempotent" Label="for a module and a nonnegative integer"/>
+##    <Description>
+##       This operation takes a module <A>M</A>, a nonnegative integer <A>bound</A>, and optionally a third list of weights <A>l</A>. It returns a nontrivial general idempotent of the endomorphism ring of <A>M</A>.
+##      <#Include Label="HairyBall">
+##    </Description>
+##  </ManSection>
+##  <#/GAPDoc>
+InstallMethod( NonTrivialGeneralEndomorphismIdempotent,
+        "for a homalg module",
+        [ IsHomalgModule, IsInt, IsList ],
+        
+  function( M, bound, l )
+    local I, aleph, alpha, gamma;
+    
+    I := IdealDefiningNonTrivialEndomorphismIdempotents( M, bound, l );
+    
+    if IsBound( I!.GeneralEndomorphism ) then
+        
+        aleph := I!.GeneralEndomorphism;
+        
+        if aleph[1] = [ bound, l ] then
+            
+            alpha := aleph[2];
+            
+        fi;
+        
+    fi;
+    
+    if not IsBound( alpha ) then
+        
+        ## recompute
+        alpha := GeneralEndomorphism( M, bound, l );
+        
+        alpha := HomalgRing( I ) * alpha;
+        
+    fi;
+    
+    gamma := ( HomalgRing( alpha ) / I ) * alpha;
+    
+    DecideZero( gamma );
+    
+    Assert( 1, IsMorphism( gamma ) );
+    
+    SetIsMorphism( gamma, true );
+    
+    Assert( 1, IsIdempotent( gamma ) );
+    
+    SetIsIdempotent( gamma, true );
+    
+    Assert( 1, not IsZero( gamma ) );
+    
+    SetIsZero( gamma, false );
+    
+    Assert( 1, not IsOne( gamma ) );
+    
+    SetIsOne( gamma, false );
+    
+    gamma!.IdealDefiningNonTrivialEndomorphismIdempotents := I;
+    
+    return gamma;
+    
+end );
+
+##
+InstallMethod( NonTrivialGeneralEndomorphismIdempotent,
+        "for a homalg module",
+        [ IsHomalgModule, IsInt ],
+        
+  function( M, bound )
+    local n, l;
+    
+    n := Length( Indeterminates( HomalgRing( M ) ) );
+    
+    l := ListWithIdenticalEntries( n, 1 );
+    
+    return NonTrivialGeneralEndomorphismIdempotent( M, bound, l );
+    
+end );
+
 ##  <#GAPDoc Label="NonTrivialEndomorphismIdempotent">
 ##  <ManSection>
 ##    <Oper Arg="M, bound[, l]" Name="NonTrivialEndomorphismIdempotent" Label="for a module and a nonnegative integer"/>

@@ -21,7 +21,7 @@
 ##  
 ##  currently represented by the above matrix
 ##  gap> DSiso := DirectSumDecompositionIsomorphism( idem );
-##  <An isomorphism of left modules>
+##  <A non-zero isomorphism of left modules>
 ##  gap> Display( last );
 ##  -1,1,0,
 ##  0, 0,1 

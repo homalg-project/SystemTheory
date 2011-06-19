@@ -31,7 +31,7 @@
 ##  gap> DS := DirectSumDecomposition( idem );
 ##  <A stably free rank 2 left module presented by 8 relations for 4 generators>
 ##  gap> iso := DirectSumDecompositionIsomorphism( idem );
-##  <An isomorphism of left modules>
+##  <A non-zero isomorphism of left modules>
 ##  gap> Display( last );
 ##  2*z*b_7_0,-2*y*b_7_0,-2*z*b_7_0,2*y*b_7_0,
 ##  1,        0,         1,         0,        

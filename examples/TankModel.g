@@ -45,4 +45,3 @@ LoadPackage( "SystemTheory" );
 idem := NonTrivialEndomorphismIdempotent( M, 0 );
 
 DS := DirectSumDecomposition( idem );
-

@@ -72,7 +72,7 @@ InstallMethod( GeneralEndomorphism,
         Error( "the bound should be non-negative\n" );
     fi;
     
-    EndM := Hom( M, M );
+    EndM := End( M );
     
     ByASmallerPresentation( EndM );
     

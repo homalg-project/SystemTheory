@@ -110,7 +110,7 @@ InstallMethod( GeneralEndomorphism,
     
 end );
 
-##
+## naive reduction (might be renamed in the future)
 InstallMethod( \/,
         "for an ideal and a morphism",
         [ IsHomalgStaticMorphism, IsHomalgModule and ConstructedAsAnIdeal ],
@@ -145,9 +145,14 @@ InstallMethod( \/,
     
     if HasIsMorphism( alpha ) and IsMorphism( alpha ) then
         
-        Assert( 1, IsMorphism( gamma ) );
+        ## it is not safe to use the following commented out lines
+        ## as the base change will set all indeterminates to zero,
+        ## also an indeterminate b which satisfies a relation like b^2+1
+        #Assert( 1, IsMorphism( gamma ) );
         
-        SetIsMorphism( gamma, true );
+        #SetIsMorphism( gamma, true );
+        
+        IsMorphism( gamma );
         
     fi;
     

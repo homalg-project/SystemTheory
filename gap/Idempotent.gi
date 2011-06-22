@@ -12,7 +12,11 @@
 #
 ####################################
 
-##
+## saturating I0 and I1 guarantees getting rid of these two maxmimal ideals
+## from the list of minimal associated primes BUT NOT from the support!!!
+## so the name IdealDefiningNonTrivialEndomorphismIdempotents
+## is not entirely justified as constructed idempotents
+## might still be trivial, i.e. zero or one.
 InstallMethod( IdealDefiningNonTrivialEndomorphismIdempotents,
         "for a homalg module",
         [ IsHomalgModule, IsInt, IsList ],
@@ -40,6 +44,7 @@ InstallMethod( IdealDefiningNonTrivialEndomorphismIdempotents,
     
     I := IdealOfCoefficients( beta, indetsA );
     
+    ## see the above comment
     I := Saturate( I, I0 );
     
     I := Saturate( I, I1 );
@@ -105,6 +110,8 @@ InstallMethod( NonTrivialGeneralEndomorphismIdempotent,
         ## recompute
         alpha := GeneralEndomorphism( M, bound, l );
         
+        ## the redefined alpha over the ambient ring
+        ## might even fail to be a morphism
         alpha := HomalgRing( I ) * alpha;
         
     fi;
@@ -165,7 +172,7 @@ InstallMethod( NonTrivialEndomorphismIdempotent,
         [ IsHomalgModule, IsInt, IsList ],
         
   function( M, bound, l )
-    local I, ass_max_codim, R, aleph, alpha, gamma;
+    local I, ass_max_codim, R, aleph, alpha, p, gamma;
     
     I := IdealDefiningNonTrivialEndomorphismIdempotents( M, bound, l );
     
@@ -198,25 +205,52 @@ InstallMethod( NonTrivialEndomorphismIdempotent,
         ## recompute
         alpha := GeneralEndomorphism( M, bound, l );
         
+        ## the redefined alpha over the ambient ring
+        ## might even fail to be a morphism
         alpha := HomalgRing( I ) * alpha;
         
     fi;
     
-    gamma := alpha / ass_max_codim[1];
+    for p in ass_max_codim do
+        
+        gamma := alpha / p;	## naive reduction (see Tools.gi)
+        
+        if IsMorphism( gamma ) and
+           not IsZero( gamma ) and
+           not IsOne( gamma ) and
+           IsIdempotent( gamma ) then
+            
+            return gamma;
+            
+        fi;
+        
+    od;
     
-    Assert( 1, IsIdempotent( gamma ) );
+    ## it is not safe to use the following commented out lines;
+    ## see the comment in the naive reduction method in Tools.gi
+    ## and the comment in IdealDefiningNonTrivialEndomorphismIdempotents
     
-    SetIsIdempotent( gamma, true );
+    #Assert( 1, IsIdempotent( gamma ) );
     
-    Assert( 1, not IsZero( gamma ) );
+    #SetIsIdempotent( gamma, true );
     
-    SetIsZero( gamma, false );
+    #Assert( 1, not IsZero( gamma ) );
     
-    Assert( 1, not IsOne( gamma ) );
+    #SetIsZero( gamma, false );
     
-    SetIsOne( gamma, false );
+    #Assert( 1, not IsOne( gamma ) );
     
-    return gamma;
+    #SetIsOne( gamma, false );
+    
+    #return gamma;
+    
+    Info( InfoWarning, HOMALG_SystemTheory.InfoWarningForNonTrivialEndomorphismIdempotent,
+          "non of the computed naive reductions (of the general endomorphism) ",
+          "modulo the associated ideals of maximal codimension produced ",
+          "a nontrivial idempotent, please try NonTrivialGeneralEndomorphismIdempotent"
+          );
+    
+    return fail;
     
 end );
 
@@ -283,6 +317,8 @@ InstallMethod( NonTrivialEndomorphismIdempotents,
         ## recompute
         alpha := GeneralEndomorphism( M, bound, l );
         
+        ## the redefined alpha over the ambient ring
+        ## might even fail to be a morphism
         alpha := HomalgRing( I ) * alpha;
         
     fi;
@@ -291,23 +327,46 @@ InstallMethod( NonTrivialEndomorphismIdempotents,
     
     for p in P do
         
-        gamma := alpha / p;
+        gamma := alpha / p;	## naive reduction (see Tools.gi)
         
-        Assert( 1, IsIdempotent( gamma ) );
+	## it is not safe to use the following commented out lines;
+        ## see the comment in the naive reduction method in Tools.gi
+        ## and the comment in IdealDefiningNonTrivialEndomorphismIdempotents
+	
+        #Assert( 1, IsIdempotent( gamma ) );
         
-        SetIsIdempotent( gamma, true );
+        #SetIsIdempotent( gamma, true );
         
-        Assert( 1, not IsZero( gamma ) );
+        #Assert( 1, not IsZero( gamma ) );
         
-        SetIsZero( gamma, false );
+        #SetIsZero( gamma, false );
         
-        Assert( 1, not IsOne( gamma ) );
+        #Assert( 1, not IsOne( gamma ) );
         
-        SetIsOne( gamma, false );
+        #SetIsOne( gamma, false );
         
-        Add( idems, gamma );
+        #Add( idems, gamma );
+        
+        if IsMorphism( gamma ) and
+           not IsZero( gamma ) and
+           not IsOne( gamma ) and
+           IsIdempotent( gamma ) then
+            
+            Add( idems, gamma );
+            
+        fi;
         
     od;
+    
+    if idems = [ ] then
+        Info( InfoWarning, HOMALG_SystemTheory.InfoWarningForNonTrivialEndomorphismIdempotent,
+              "non of the computed naive reductions (of the general endomorphism) ",
+              "modulo the associated ideals produced a nontrivial idempotent, ",
+              "please try NonTrivialGeneralEndomorphismIdempotent"
+              );
+        
+        return fail;
+    fi;
     
     return idems;
     

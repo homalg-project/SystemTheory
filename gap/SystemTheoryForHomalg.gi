@@ -18,7 +18,7 @@
 
 InstallValue( HOMALG_SystemTheory,
         rec(
-            
+            InfoWarningForNonTrivialEndomorphismIdempotent := 1,
            )
 );
 

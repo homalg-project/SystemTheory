@@ -84,6 +84,10 @@ InstallMethod( NonTrivialGeneralEndomorphismIdempotent,
     
     I := IdealDefiningNonTrivialEndomorphismIdempotents( M, bound, l );
     
+    if I = HomalgRing( I ) then
+        return false;
+    fi;
+    
     if IsBound( I!.GeneralEndomorphism ) then
         
         aleph := I!.GeneralEndomorphism;
@@ -165,6 +169,10 @@ InstallMethod( NonTrivialEndomorphismIdempotent,
     
     I := IdealDefiningNonTrivialEndomorphismIdempotents( M, bound, l );
     
+    if I = HomalgRing( I ) then
+        return false;
+    fi;
+    
     ass_max_codim := AssociatedPrimesOfMaximalCodimension( I );
     
     if ass_max_codim = [ ] then
@@ -245,6 +253,10 @@ InstallMethod( NonTrivialEndomorphismIdempotents,
     local I, P, R, aleph, alpha, gamma, idems, p;
     
     I := IdealDefiningNonTrivialEndomorphismIdempotents( M, bound, l );
+    
+    if I = HomalgRing( I ) then
+        return false;
+    fi;
     
     P := AssociatedPrimes( I );
     

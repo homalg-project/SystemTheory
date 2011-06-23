@@ -12,7 +12,7 @@
 ##  gap> LargestMinimalNumberOfLocalGenerators( M );
 ##  2
 ##  gap> idem := NonTrivialGeneralEndomorphismIdempotent( M, 0 );
-##  <A non-zero idempotent of a left module>
+##  <A nontrivial idempotent of a left module>
 ##  gap> Display( idem );
 ##  1/2,     -z*b_7_0,y*b_7_0, 
 ##  z*b_7_0, 1/2,     -x*b_7_0,

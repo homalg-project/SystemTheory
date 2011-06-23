@@ -6,7 +6,7 @@
 ##  gap> M := LeftPresentation( m );
 ##  <A non-torsion left module presented by 2 relations for 3 generators>
 ##  gap> idem := NonTrivialEndomorphismIdempotent( M, 0 );
-##  <A non-zero idempotent of a left module>
+##  <A nontrivial idempotent of a left module>
 ##  gap> DS := DirectSumDecomposition( idem );
 ##  <A rank 1 left module presented by 2 relations for 3 generators>
 ##  gap> M;

@@ -9,14 +9,14 @@
 ##  gap> M := LeftPresentation( m );
 ##  <A non-torsion left module presented by 2 relations for 3 generators>
 ##  gap> idems := NonTrivialEndomorphismIdempotents( M, 0 );
-##  [ <A non-zero idempotent of a left module>, 
-##    <A non-zero idempotent of a left module>, 
-##    <A non-zero idempotent of a left module>, 
-##    <A non-zero idempotent of a left module>, 
-##    <A non-zero idempotent of a left module>, 
-##    <A non-zero idempotent of a left module>, 
-##    <A non-zero idempotent of a left module>, 
-##    <A non-zero idempotent of a left module> ]
+##  [ <A nontrivial idempotent of a left module>, 
+##    <A nontrivial idempotent of a left module>, 
+##    <A nontrivial idempotent of a left module>, 
+##    <A nontrivial idempotent of a left module>, 
+##    <A nontrivial idempotent of a left module>, 
+##    <A nontrivial idempotent of a left module>, 
+##    <A nontrivial idempotent of a left module>, 
+##    <A nontrivial idempotent of a left module> ]
 ##  gap> DSums := List( idems, DirectSumDecomposition );
 ##  [ <A rank 1 left module presented by 2 relations for 3 generators>, 
 ##    <A rank 1 left module presented by 2 relations for 3 generators>, 

@@ -66,6 +66,7 @@
 <#Include SYSTEM "SystemTheory.xml">
 <#Include SYSTEM "Idempotent.xml">
 <#Include SYSTEM "Tools.xml">
+<#Include SYSTEM "examples.xml">
 </Body>
 
 <#Include SYSTEM "appendix.xml">

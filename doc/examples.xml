@@ -13,10 +13,10 @@ This chapter gives examples for the usage of this package.
 <Chapter Label="examples">
 <Heading>Examples</Heading>
 
-<!--
-<Section Label="XXX">
-<Heading>XXX</Heading>
--->
+<Section Label="Real life examples">
+<Heading>Real life examples</Heading>
+
+<#Include Label="Pommaret2"/>
 
 </Section>
 

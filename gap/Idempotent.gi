@@ -32,10 +32,10 @@ InstallMethod( IdealDefiningNonTrivialEndomorphismIdempotents,
     
     A := HomalgRing( alpha );
     
-    I0 := LeftSubmodule( RelativeIndeterminatesOfPolynomialRing( A ) );
-
     indetsA := List( indets, a -> a / A );
     
+    I0 := IdealOfCoefficients( alpha, indetsA );
+
     I1 := IdealOfCoefficients( alpha - TheIdentityMorphism( Source( alpha ) ), indetsA );
     
     beta := alpha^2 - alpha;

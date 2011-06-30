@@ -54,7 +54,7 @@ InstallMethod( GeneralLinearCombination,
     
     mat := A * mat;
     
-    r := List( indets, i -> GetEntryOfHomalgMatrix( i * mat, 1, 1 ) );
+    r := List( indets, i -> MatElm( i * mat, 1, 1 ) );
     
     return List( r, rr -> rr / A );
     

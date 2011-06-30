@@ -309,8 +309,8 @@ BannerString := Concatenation(
   "   ", ~.Persons[2].FirstNames, " ", ~.Persons[2].LastName,
         " (", ~.Persons[2].WWWHome, ")\n",
   "Type:\n",
-  "  ?SystemTheory:                ## for the contents of the manual\n",
-  "  ?SystemTheory:x               ## for chapter/section/topic x\n",
+  "  ?SystemTheory:             ## for the contents of the manual\n",
+  "  ?SystemTheory:x            ## for chapter/section/topic x\n",
   "----------------------------------------------------------------\n" ),
 
 ##  Suggest here if the package should be *automatically loaded* when GAP is 

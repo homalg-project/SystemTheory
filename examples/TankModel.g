@@ -10,7 +10,7 @@
 ##  gap> DS := DirectSumDecomposition( idem );
 ##  <A rank 1 left module presented by 2 relations for 3 generators>
 ##  gap> M;
-##  <A rank 1 left module presented by 1 relation for 2 generators>
+##  <A rank 1 left module presented by 2 relations for 3 generators>
 ##  gap> Display( DS );
 ##  delta^2-1,0,         0,       
 ##  0,        -delta^2-1,2*d*delta
@@ -24,9 +24,10 @@
 ##  <A non-zero isomorphism of left modules>
 ##  gap> Display( last );
 ##  -1,1,0,
+##  1, 1,0,
 ##  0, 0,1 
 ##  
-##  the map is currently represented by the above 2 x 3 matrix
+##  the map is currently represented by the above 3 x 3 matrix
 ##  ]]></Example>
 ##  <#/GAPDoc>
 

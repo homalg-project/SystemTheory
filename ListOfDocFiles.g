@@ -8,5 +8,6 @@ list := [
          "../examples/TankModel.g",
          "../examples/TankModel2.g",
          "../examples/HairyBall.g",
+         "../examples/Dirac.g",
          "../examples/Pommaret2.g",
          ];

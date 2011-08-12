@@ -2,9 +2,9 @@
 ##  <Subsection Label="Dirac">
 ##  <Heading>Dirac</Heading>
 ##  <Example><![CDATA[
-##  gap> C := HomalgFieldOfRationalsInDefaultCAS( "i", "i^2+1" );;
-##  gap> R := C * "d1,d2,d3,d4";;
-##  gap> Display( R );
+##  gap> C := HomalgFieldOfRationalsInDefaultCAS( "i", "i^2+1" );
+##  Q[i]/(i^2+1)
+##  gap> R := C * "d1,d2,d3,d4";
 ##  (Q[i]/(i^2+1))[d1,d2,d3,d4]
 ##  gap> m := HomalgMatrix( "[ \
 ##  > d4,0,-i*d3,-(i*d1+d2),\

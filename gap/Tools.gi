@@ -29,6 +29,10 @@ InstallMethod( GeneralLinearCombination,
   function( R, bound, l, n )
     local mat, m, A, r, i, s, indets;
     
+    if n = 0 then
+        return [ ];
+    fi;
+    
     mat := MonomialMatrixWeighted( 0, R, l );
     
     for i in [ 1 .. bound ] do

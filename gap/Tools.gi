@@ -103,7 +103,7 @@ InstallMethod( GeneralEndomorphism,
     od;
     
     ## check assertion
-    Assert( 2, IsMorphism( alpha ) );
+    Assert( 4, IsMorphism( alpha ) );
     
     SetIsMorphism( alpha, true );
     
@@ -152,7 +152,7 @@ InstallMethod( \/,
         ## it is not safe to use the following commented out lines
         ## as the base change will set all indeterminates to zero,
         ## also an indeterminate b which satisfies a relation like b^2+1
-        #Assert( 1, IsMorphism( gamma ) );
+        #Assert( 3, IsMorphism( gamma ) );
         
         #SetIsMorphism( gamma, true );
         

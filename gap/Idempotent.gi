@@ -120,19 +120,19 @@ InstallMethod( NonTrivialGeneralEndomorphismIdempotent,
     
     DecideZero( gamma );
     
-    Assert( 1, IsMorphism( gamma ) );
+    Assert( 3, IsMorphism( gamma ) );
     
     SetIsMorphism( gamma, true );
     
-    Assert( 1, IsIdempotent( gamma ) );
+    Assert( 3, IsIdempotent( gamma ) );
     
     SetIsIdempotent( gamma, true );
     
-    Assert( 1, not IsZero( gamma ) );
+    Assert( 3, not IsZero( gamma ) );
     
     SetIsZero( gamma, false );
     
-    Assert( 1, not IsOne( gamma ) );
+    Assert( 3, not IsOne( gamma ) );
     
     SetIsOne( gamma, false );
     
@@ -230,15 +230,15 @@ InstallMethod( NonTrivialEndomorphismIdempotent,
     ## see the comment in the naive reduction method in Tools.gi
     ## and the comment in IdealDefiningNonTrivialEndomorphismIdempotents
     
-    #Assert( 1, IsIdempotent( gamma ) );
+    #Assert( 3, IsIdempotent( gamma ) );
     
     #SetIsIdempotent( gamma, true );
     
-    #Assert( 1, not IsZero( gamma ) );
+    #Assert( 3, not IsZero( gamma ) );
     
     #SetIsZero( gamma, false );
     
-    #Assert( 1, not IsOne( gamma ) );
+    #Assert( 3, not IsOne( gamma ) );
     
     #SetIsOne( gamma, false );
     
@@ -333,15 +333,15 @@ InstallMethod( NonTrivialEndomorphismIdempotents,
         ## see the comment in the naive reduction method in Tools.gi
         ## and the comment in IdealDefiningNonTrivialEndomorphismIdempotents
 	
-        #Assert( 1, IsIdempotent( gamma ) );
+        #Assert( 3, IsIdempotent( gamma ) );
         
         #SetIsIdempotent( gamma, true );
         
-        #Assert( 1, not IsZero( gamma ) );
+        #Assert( 3, not IsZero( gamma ) );
         
         #SetIsZero( gamma, false );
         
-        #Assert( 1, not IsOne( gamma ) );
+        #Assert( 3, not IsOne( gamma ) );
         
         #SetIsOne( gamma, false );
         

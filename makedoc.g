@@ -22,5 +22,5 @@ MakeGAPDocDoc( "doc", "SystemTheoryForHomalg", list, "SystemTheoryForHomalg" );
 
 GAPDocManualLab("SystemTheory");
 
-quit;
+QUIT;
 

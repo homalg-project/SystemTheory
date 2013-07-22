@@ -18,6 +18,3 @@
 
 DeclareOperation( "GeneralEndomorphism",
     [ IsHomalgStaticObject, IsInt, IsList ] );
-
-DeclareOperation( "GeneralLinearCombination",
-    [ IsHomalgRing, IsInt, IsList, IsInt ] );

@@ -191,10 +191,19 @@ Status := "dev",
 ##  the updating of package information on the GAP Website, and inclusion
 ##  and updating of the package in the GAP distribution.
 #
-README_URL := 
-  "http://homalg.math.rwth-aachen.de/~barakat/homalg-project/SystemTheory/README.SystemTheory",
-PackageInfoURL := 
-  "http://homalg.math.rwth-aachen.de/~barakat/homalg-project/SystemTheory/PackageInfo.g",
+SourceRepository := rec(
+    Type := "git",
+    URL := Concatenation( "https://github.com/homalg-project/", ~.PackageName ),
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+PackageWWWHome  := Concatenation( "https://github.com/homalg-project/", ~.PackageName, "/" ),
+PackageInfoURL  := Concatenation( ~.PackageWWWHome, "blob/master/PackageInfo.g" ),
+README_URL      := Concatenation( ~.PackageWWWHome, "blob/master/README.md" ),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                 "/releases/download/v", ~.Version,
+                                 "/", ~.PackageName, "-", ~.Version ),
+
+ArchiveFormats := ".tar.gz",
 
 ##  Here you  must provide a short abstract explaining the package content 
 ##  in HTML format (used on the package overview Web page) and an URL 
@@ -211,7 +220,8 @@ PackageInfoURL :=
 #   is an example of how to create a <span class=\"pkgname\">GAP</span> \
 #   package. It has little functionality except for being a package",
 #
-PackageWWWHome := "http://homalg.math.rwth-aachen.de/index.php/unreleased/systemtheory",
+AbstractHTML   :=  "",
+
 #               
 ##  Here is the information on the help books of the package, used for
 ##  loading into GAP's online help and maybe for an online copy of the 
@@ -244,8 +254,6 @@ PackageDoc := rec(
   # use same as in GAP            
   BookName  := "SystemTheory",
   # format/extension can be one of .zoo, .tar.gz, .tar.bz2, -win.zip
-  Archive := 
-    "http://homalg.math.rwth-aachen.de/~barakat/homalg-project/SystemTheory/SystemTheory.tar.gz",
   ArchiveURLSubset := ["doc"],
   HTMLStart := "doc/chap0.html",
   PDFFile   := "doc/manual.pdf",
